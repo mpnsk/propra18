@@ -1,6 +1,8 @@
 plugins {
     id 'java'
+    id 'application'
 }
+mainClassName = "de.feu.propra18.Main"
 
 group 'de.feu'
 version '1.0-SNAPSHOT'
