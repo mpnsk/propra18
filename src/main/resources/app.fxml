@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="de.feu.propra18.GodClass">
+    <center>
+        <Pane fx:id="pane" onMousePressed="#createPointByMouse" rotate="180" BorderPane.alignment="CENTER">
+            <rotationAxis>
+                <Point3D x="1.0"/>
+            </rotationAxis>
+        </Pane>
+    </center>
+    <top>
+        <VBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <MenuBar BorderPane.alignment="CENTER">
+
+                <Menu mnemonicParsing="false" text="Datei">
+                    <MenuItem mnemonicParsing="false" onAction="#clear" text="Neu"/>
+                    <MenuItem mnemonicParsing="false" onAction="#loadPoints" text="Öffnen"/>
+                    <MenuItem mnemonicParsing="false" onAction="#savePoints" text="Speichern"/>
+                    <MenuItem mnemonicParsing="false" onAction="#savePointsTo" text="Speichern unter"/>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Hilfe">
+                    <MenuItem mnemonicParsing="false" onAction="#showHelp" text="Hilfe anzeigen"/>
+                </Menu>
+                <Menu text="Zufällige Punkte">
+                    <MenuItem onAction="#createRandomPoints10" text="10"/>
+                    <MenuItem onAction="#createRandomPoints50" text="50"/>
+                    <MenuItem onAction="#createRandomPoints100" text="100"/>
+                    <MenuItem onAction="#createRandomPoints500" text="500"/>
+                    <MenuItem onAction="#createRandomPoints1000" text="1000"/>
+                </Menu>
+            </MenuBar>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+                <Button fx:id="undo" mnemonicParsing="false" onAction="#undo" text="undo"/>
+                <Button fx:id="redo" mnemonicParsing="false" onAction="#redo" text="redo"/>
+            </ToolBar>
+        </VBox>
+    </top>
+    <bottom>
+    </bottom>
+    <bottom>
+    </bottom>
+</BorderPane>
+
