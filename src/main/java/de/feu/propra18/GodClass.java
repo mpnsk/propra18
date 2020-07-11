@@ -82,7 +82,7 @@ public class GodClass {
      */
     public void savePointsTo(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setInitialDirectory(new File("../Tester/data"));
+        fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
         fileChooser.setTitle("Speichern unter:");
         file = fileChooser.showSaveDialog(pane.getScene().getWindow());
         save(hullCalculator.getPoints());
@@ -101,7 +101,7 @@ public class GodClass {
     public void loadPoints(ActionEvent actionEvent) {
         clear(actionEvent);
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setInitialDirectory(new File("../Tester/data"));
+        fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
         fileChooser.setTitle("Datei laden:");
         FileChooser.ExtensionFilter point_file = new FileChooser.ExtensionFilter("Point file", "*.points");
         FileChooser.ExtensionFilter any_file = new FileChooser.ExtensionFilter("any file", "*");
